@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  
+}
+.header {
+    background-color: red;
+    width: 100%;
+    height: 100px;
+    color: white;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.footer{
+   background-color: red;
+    width: 100%;
+    height: 100px;
+    color: white;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.now{
+    margin-right: 20px;
+}
+/*indexページ*/
+.main{
+    height:550px;
+    margin-left: 20px;
+}
+table {
+    border-collapse: collapse;
+    border: solid 1px black;
+    width: 1200px;
+}
+th{
+    border: solid 1px black;
+    padding: 3px 10px;
+    background-color: #ffc0cb;
+  
+}
+th.update_at {
+    width: 1700px;
+}
+th.date {
+    width: 800px;
+}
+/*new,edit,showページ*/
+
+.new_main{
+    height:580px;
+    margin-left: 20px;
+}
+.new_th {
+    height: 50px;
+    width: 130px;
+}
+td {
+    background-color: #ffb6c1;
+    border: solid 1px;
+    width: 350px;
+    padding: 5px 7px;
+    border: solid 1px black;
+    text-align: center;
+}
+input {
+    width: 90%;
+    height: 30px;
+    margin-left: 10px
+}
+tr.memomo_tr {
+    height: 150px;
+}
+th.new_th{
+    width:100px;
+}
+tb.new_tb{
+    width:100px;
+}
+textarea {
+    width: 90%;
+    height: 130px;
+    margin-left: 10px
+}
+
+li {
+    width: 210px;
+    list-style: none;
+    font-weight: 600;
+}
+
+.notice{
+    background-color: #f0e68c;
+    width: 500px;
+    border:solid 1px ;
+    font-weight: 800;
+    text-align:center;
+}
+#errors{
+    color: white;
+    background-color: red;
+    font-weight: 800;
+    border:solid 1px ;
+    text-align:center;
+}

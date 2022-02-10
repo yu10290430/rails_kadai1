@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<div class="header">
+  <h1>Ruby on Rails スケジュール管理アプリ</h1>
+</div>
+<%= yield %>
+<div class="footer">
+  <%if controller.action_name == "index"%>
+  <p>現在の日時：<span class="now"><%= Date.current.strftime('%Y年%m月%d日')%></span> スケジュール合計<span> <%= @posts.count%></span></p>
+  <% else %>
+  <p>現在の日時：<span><%= Date.current.strftime('%Y年%m月%d日')%></span></p>
+  <% end %>
+</div>
+<script type="text/javascript">
+  
+</script>
+  </body>
+</html>

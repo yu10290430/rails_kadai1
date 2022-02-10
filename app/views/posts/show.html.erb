@@ -1,0 +1,37 @@
+<div class="main">
+<h3>スケジュール詳細</h3>
+ 
+    <table>
+      <tr>
+        <th class="new_th">タイトル</th>
+        <td class="new_tb"><%= @post.title %></td>
+      </tr>
+      <tr>
+        <th class="new_th">開始日</th>
+        <td class="new_tb"><%= @post.start.strftime('%Y年%m月%d日') %></td>
+      </tr>
+      <tr>
+        <th class="new_th">終了日</th>
+        <td class="new_tb"><%= @post.end.strftime('%Y年%m月%d日') %></td>
+      </tr>
+       <tr>
+        <th class="new_th">投稿日</th>
+        <td class="new_tb"><%= @post.updated_at.to_s(:datetime_jp) %></td>
+      </tr>
+      <tr>
+        <th class="new_th">終日</th>
+        <td class="new_tb"><%= @post.all %></td>
+      </tr>
+       <tr>
+        <th class="new_th">スケジュールメモ</th>
+        <td class="new_tb"><%= @post.memo %></td>
+      </tr>
+    </table>
+ 
+    <div>
+      <ul>
+        <li><%= link_to "スケジュール一覧に戻る", :posts %></li>
+        <li><%= link_to "スケジュールを編集する", "/posts/#{@post.id}/edit" %></li>
+      </ul>
+    </div>
+    </div>

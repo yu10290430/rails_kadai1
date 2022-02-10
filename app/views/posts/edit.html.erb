@@ -1,0 +1,43 @@
+<div class="new_main">
+  <h3>スケジュール編集</h3>
+  
+  <% flash.each do |key, value|%>
+    <div id="errors" class="alert alert-<%=key %>" role="alert"><%= value %></div>
+  <% end %>
+ 
+  <%= form_for(@post) do |f|%>
+  <table>
+        <tr>
+          <th class="new_th"><%= f.label :title ,"タイトル" %></th>
+          <td><%= f.text_field :title %></td>
+        </tr>
+ 
+        <tr>
+          <th class="new_th"><%= f.label :start ,"開始日" %></th>
+          <td><%= f.date_field :start %></td>
+        </tr>
+ 
+        <tr>
+          <th class="new_th"><%= f.label :end ,"終了日" %></th>
+          <td><%= f.date_field :end %></td>
+        </tr>
+ 
+        <tr>
+          <th class="new_th"><%= f.label :all ,"終日" %></th>
+          <td><%= f.check_box :all %></td>
+        </tr>
+        
+        <tr class="memomo_tr">
+          <th class="new_th"><%= f.label :memo ,"スケジュールメモ" %></th>
+          <td class="memo_tb"><%= f.text_area :memo %></td>
+        </tr>
+      </table>
+ 
+      <div>
+        <ul>
+          <li><%= f.submit "編集を完了する"%></li>
+          <li><%= link_to "スケジュール一覧に戻る", :posts %></li>
+        </ul>
+      </div>
+    <% end %>
+</div>
